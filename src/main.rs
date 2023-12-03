@@ -38,11 +38,13 @@ fn main() {
     if let Some (vertices) = map.get(&1) {
         set.insert(1_u32);
         dfs(vertices, &mut set, &map);
+        println!("{}", set.len());
+        let s = format!("{:?}", set).replace("{", "").replace("}", "").replace(",", "");
+        println!("{}", s);
+    } else {
+        println!("1");
+        println!("1");
     }
-
-    println!("{}", set.len());
-    let s = format!("{:?}", set).replace("{", "").replace("}", "").replace(",", "");
-    println!("{}", s);
 }
 
 
